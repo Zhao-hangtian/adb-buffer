@@ -1,4 +1,4 @@
-# 《高级数据库系统》课程实验 2018-2019 USTC#
+# 《高级数据库系统》课程实验 2018-2019 USTC
 
 ## Introduction
 In this project, we will implement a simple storage and buffer manager. The document
