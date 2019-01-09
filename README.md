@@ -1,7 +1,6 @@
-# adb-buffer
-#《高级数据库系统》课程实验 2018-2019 USTC
+# 《高级数据库系统》课程实验 2018-2019 USTC#
 
-##Introduction
+## Introduction
 In this project, we will implement a simple storage and buffer manager. The document
 addresses the storage and buffer manager. Buffer and frame sizes, buffer and frame
 storage structures, page formats, page storage structures, file formats, buffering
