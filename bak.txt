@@ -1,0 +1,92 @@
+// buffer.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+//
+
+#include "pch.h"
+#include "stdio.h"
+#include <iostream>
+
+using namespace std;
+
+void openDBFile(FILE * fst)
+{
+	FILE * fstream_w;
+	fstream_w = fopen("data.dbf", "w"); // 不存在则创建
+	if (fstream_w == NULL)
+	{
+		printf("open or create file failed!\n");
+		exit(1);
+	}
+	// 测试写入一个record
+	char * p_schema = NULL; // 预留指向记录模式的指针0x00000000，8B
+	//unsigned int length_record = 316;
+	unsigned int timestamp = 0;
+	//char * namePtr[28] = {'\0'};
+	//char * adrressPtr[256] = { '\0' };
+	//char * genderPtr[4] = { '\0' };
+	//char * birthdayPtr[12] = { '\0' };
+	//unsigned int * lrPtr = &length_record;
+	//unsigned int * tsPtr = &timestamp;
+	char recordPtr[316] = "start"; // 一条记录字节长度
+	/*cout << recordPtr << endl;
+	char ts_char[4] = {'\0'};
+	_itoa(timestamp, ts_char, 10);
+	for (int i = 12; i < 16; i++)
+	{
+		recordPtr[i] = &ts_char[i-12];
+	}*/
+	int writeCnt = fwrite(recordPtr, sizeof(recordPtr), 1, fstream_w);
+	//cout << static_cast<const void *>(p_schema) << endl;
+
+	fclose(fstream_w);
+
+	FILE * fstream_r;
+	fstream_r = fopen("data.dbf", "r");
+	char block[256];
+	int readCnt = fread(block, sizeof(block), 1, fstream_r);
+	printf("readCnt = %d\n", readCnt);
+
+	fclose(fstream_r);
+
+	fst = fstream_w;
+}
+
+int main()
+{
+    std::cout << "Hello World!\n"; 
+	FILE * fstream = NULL;
+	openDBFile(fstream);
+	/*char c = 'z';
+	char * cp = &c;*/
+	//char * cp = NULL;
+	//cout << static_cast<const void *>(cp) << endl;
+
+/*
+	FILE * fstream;
+	cout << "First 10 record read:\n";
+	fstream = fopen("data-5w-50w-zipf.txt", "rt+");
+	if (fstream == NULL)
+	{
+		printf("open file failed!\n");
+		exit(1);
+	}
+	int a, b = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		fscanf(fstream, "%d,%d", &a, &b);
+		printf("%d %d\n", a,b);
+	}
+	fclose(fstream);
+	unsigned char c[12] = { 0 };
+	return 0;*/
+}
+
+// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
+// 调试程序: F5 或调试 >“开始调试”菜单
+
+// 入门提示: 
+//   1. 使用解决方案资源管理器窗口添加/管理文件
+//   2. 使用团队资源管理器窗口连接到源代码管理
+//   3. 使用输出窗口查看生成输出和其他消息
+//   4. 使用错误列表窗口查看错误
+//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
+//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
