@@ -1,8 +1,8 @@
 # adb-buffer
-#《高级数据库系统》课程实验大作业
-#"Storage and Buffer Manager Lab Description" For “Advanced Database Systems” 2018
+# 《高级数据库系统》课程实验大作业
+# "Storage and Buffer Manager Lab Description" For “Advanced Database Systems” 2018
 
-##Introduction
+## Introduction
 In this project, we will implement a simple storage and buffer manager. The document
 addresses the storage and buffer manager. Buffer and frame sizes, buffer and frame
 storage structures, page formats, page storage structures, file formats, buffering
