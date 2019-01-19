@@ -1,4 +1,3 @@
-# adb-buffer
 # 《高级数据库系统》课程实验大作业
 # "Storage and Buffer Manager Lab Description" For “Advanced Database Systems” 2018
 
