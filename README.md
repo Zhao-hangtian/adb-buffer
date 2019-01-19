@@ -12,7 +12,7 @@ from the material covered in class that are relevant to buffer and storage manag
 see buffer.pdf for more detail...
 
 ## What's this
-研一上修了金老师的adb课程，期末做了个实现buffer的作业；
-采用C++ 14 STL编程，LRU cache的数据结构主要使用了哈希+双向链表，空间换时间；
-看着作业需求文档buffer.pdf自己慢慢编的码，个人觉得这个作业还比较有意思所以放上来交流学习；
-有问题可以提issue交流hhh
+- 研一上修了金老师的adb课程，期末做了个实现buffer的作业；
+- 采用C++ 14 STL编程，LRU cache的数据结构主要使用了哈希+双向链表，空间换时间；
+- 看着作业需求文档buffer.pdf自己慢慢编的码，个人觉得这个作业还比较有意思所以放上来交流学习；
+- 有问题可以提issue交流hhh
