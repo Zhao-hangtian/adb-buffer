@@ -10,7 +10,7 @@
 
 #define RECORDSIZE 316
 #define FRAMESIZE 4096 
-#define BUFFSIZE 1024 // 可修改缓存区大小
+#define BUFFSIZE 32768 // 可修改缓存区大小
 #define MAXSIZE  FRAMESIZE*BUFFSIZE
 
 using namespace std;
